@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nombre Apellido | Docente e Investigador</title>
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #1f1f1f;
+      --muted: #4b4b4b;
+      --accent: #d44b4b;
+      --card: #ffffff;
+      --border: #e5e2db;
+      --max-width: 1024px;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: radial-gradient(circle at 10% 20%, rgba(212, 75, 75, 0.05), transparent 25%),
+                  radial-gradient(circle at 90% 30%, rgba(0, 0, 0, 0.04), transparent 25%),
+                  radial-gradient(circle at 30% 80%, rgba(0, 0, 0, 0.035), transparent 25%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 48px 20px 64px;
+    }
+
+    header {
+      max-width: var(--max-width);
+      margin: 0 auto 64px auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    header img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.06);
+      justify-self: end;
+    }
+
+    .intro h1 {
+      margin: 0 0 8px;
+      font-size: 46px;
+      font-family: var(--serif);
+      letter-spacing: -0.5px;
+    }
+
+    .intro h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .intro p {
+      margin: 0 0 16px;
+      max-width: 560px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--card);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(145deg, #f2d2d2, #fdf3f3);
+      border-color: rgba(212, 75, 75, 0.25);
+      color: #8c1f1f;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      gap: 40px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.05);
+    }
+
+    section h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 22px;
+      font-family: var(--serif);
+      letter-spacing: -0.4px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .card-item {
+      padding: 18px;
+      border-radius: 14px;
+      background: #f7f4ef;
+      border: 1px solid var(--border);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-item h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .card-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    ul.clean li {
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #fdfbf8;
+    }
+
+    ul.clean li span {
+      display: block;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 20px auto 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      body {
+        padding: 32px 18px;
+      }
+
+      header {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      header img {
+        order: -1;
+        justify-self: start;
+      }
+
+      .intro h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="intro">
+      <h1>Nombre Apellido</h1>
+      <h2>Profesor Asociado | Investigación en Ciencias Sociales</h2>
+      <p>
+        Soy docente e investigador interesado en los cruces entre educación, innovación
+        y políticas públicas. Combino trabajo de campo, análisis de datos y colaboración
+        con comunidades para impulsar proyectos con impacto.
+      </p>
+      <div class="btn-row">
+        <a class="btn primary" href="#contacto">Contacto</a>
+        <a class="btn" href="#publicaciones">Publicaciones</a>
+        <a class="btn" href="#docencia">Docencia</a>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Retrato profesional" />
+  </header>
+
+  <main>
+    <section id="acerca">
+      <h3>Acerca de mí</h3>
+      <div class="two-col">
+        <p>
+          Actualmente soy profesor asociado en la Universidad Ejemplo y miembro del Centro de
+          Investigación en Aprendizaje. Mi agenda se centra en metodologías participativas,
+          evaluación de políticas educativas y el rol de la tecnología en el aula.
+        </p>
+        <p>
+          He colaborado con organismos internacionales y gobiernos locales en proyectos de
+          alfabetización digital, formación docente y diseño de indicadores. Disfruto acompañar
+          a nuevos investigadores y co-crear soluciones junto a las comunidades educativas.
+        </p>
+      </div>
+    </section>
+
+    <section id="investigacion">
+      <h3>Líneas de investigación</h3>
+      <div class="two-col">
+        <div class="card-item">
+          <h4>Innovación educativa</h4>
+          <p>Diseño e implementación de experiencias de aprendizaje híbridas y centradas en el estudiante.</p>
+        </div>
+        <div class="card-item">
+          <h4>Políticas públicas</h4>
+          <p>Evaluación de programas y construcción de evidencia para toma de decisiones en educación.</p>
+        </div>
+        <div class="card-item">
+          <h4>Inclusión digital</h4>
+          <p>Acceso, equidad y alfabetización digital en contextos urbanos y rurales.</p>
+        </div>
+        <div class="card-item">
+          <h4>Formación docente</h4>
+          <p>Desarrollo profesional continuo y comunidades de práctica para educadores.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicaciones">
+      <h3>Publicaciones recientes</h3>
+      <ul class="clean">
+        <li>
+          Transformación digital en escuelas rurales (2024)
+          <span>Revista Latinoamericana de Educación Abierta — Coautoría con M. Pérez</span>
+        </li>
+        <li>
+          Evaluar para aprender: marco de competencias docentes (2023)
+          <span>Journal of Teaching Innovation — Indexada en Scopus</span>
+        </li>
+        <li>
+          Comunidades de práctica y liderazgo educativo (2022)
+          <span>Libro colectivo, Editorial Horizonte</span>
+        </li>
+        <li>
+          Big data y equidad en educación superior (2021)
+          <span>International Journal of EdTech — DOI: 10.1234/edtech.2021.05</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="docencia">
+      <h3>Docencia y mentoría</h3>
+      <div class="two-col">
+        <div class="card-item">
+          <h4>Asignaturas</h4>
+          <p>Metodología de la Investigación, Innovación en Educación, Seminario de Tesis.</p>
+        </div>
+        <div class="card-item">
+          <h4>Mentoría</h4>
+          <p>Acompaño tesis de licenciatura y maestría en educación, políticas públicas y estudios socioculturales.</p>
+        </div>
+        <div class="card-item">
+          <h4>Workshops</h4>
+          <p>Formación docente en diseño de experiencias de aprendizaje y evaluación auténtica.</p>
+        </div>
+        <div class="card-item">
+          <h4>Colaboraciones</h4>
+          <p>Proyectos con escuelas, ONGs y equipos gubernamentales para fortalecer capacidades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h3>Proyectos en curso</h3>
+      <ul class="clean">
+        <li>
+          Laboratorio de aulas híbridas
+          <span>Pilotos de aulas flexibles con analítica de aprendizaje y retroalimentación docente.</span>
+        </li>
+        <li>
+          Red de mentoría para docentes noveles
+          <span>Programa de acompañamiento en línea con comunidades de práctica regionales.</span>
+        </li>
+        <li>
+          Observatorio de políticas educativas
+          <span>Seguimiento y análisis de programas de inclusión digital y formación docente.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h3>Contacto</h3>
+      <div class="two-col">
+        <p>
+          ¿Interesado en colaborar o invitarme a tu institución? Escríbeme para coordinar
+          charlas, asesorías o proyectos de investigación conjunta.
+        </p>
+        <div class="card-item">
+          <h4>Correo</h4>
+          <p><a href="mailto:correo@universidad.edu">correo@universidad.edu</a></p>
+          <h4>Redes</h4>
+          <p><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a> · <a href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2024 Nombre Apellido — Docente e Investigador.
+  </footer>
+</body>
+</html>
