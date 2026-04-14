@@ -1,1 +1,1 @@
-# pp
+#El objetivo es crear un indicador de prevalencia del tópico anotado a nivel de manifiesto. Se ajusta el modelo DistilBERT-uncased. A partir de los conjuntos de train/validation/test se debe ajustar el modelo preentrenado siguiendo la ruta operativa planteada.
